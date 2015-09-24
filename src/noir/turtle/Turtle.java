@@ -21,11 +21,12 @@ public class Turtle extends Drawable implements KeyListener
 {
 	public static void main(String[] args)
 	{
-		LSystem lSystem = noir.lsystem.Examples.sierpinski(false);
-		String string = lSystem.getString(6);
+//		LSystem lSystem = noir.lsystem.Examples.sierpinski(false);
+		LSystem lSystem = noir.lsystem.Examples.hexaCloud();
+		String string = lSystem.getString(5);
 		char[] characters = string.toCharArray(); 
 		
-		Turtle turtle = new Turtle(lSystem.angle, StartingDirection.LEFT);
+		Turtle turtle = new Turtle(lSystem.angle, StartingDirection.UP);
 		new Panel(
 			lSystem.title, 
 			800, 600, 
@@ -237,8 +238,8 @@ public class Turtle extends Drawable implements KeyListener
 			} break;
 			default:
 			{
-				String message = String.format("Unknown character: %c", c);
-				throw new RuntimeException(message);
+//				String message = String.format("Unknown character: %c", c);
+//				throw new RuntimeException(message);
 			}
 		}
 	}

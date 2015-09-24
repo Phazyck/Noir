@@ -68,6 +68,91 @@ public class Examples {
 		return new LSystem(title, axiom, grammar, angle);
 	}
 	
+	public static LSystem jag()
+	{
+		String title = "Test";
+		String axiom = "F";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "Ff[--F++F]F");
+		double angle = 45.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem fractalPlant()
+	{
+		String title = "Test";
+		String axiom = "X";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "FF");
+		grammar.put('X', "F-[[X]+X]+F[+FX]-X");
+		
+		double angle = 25.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem pythagorasTree()
+	{
+		String title = "Test";
+		String axiom = "0";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('1', "1F1F");
+		grammar.put('0', "1[F[-0F][+0F]]");
+		
+		double angle = 45.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem hilbert()
+	{
+		String title = "Test";
+		String axiom = "1";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('1', "-2F+1F1+F2-");
+		grammar.put('2', "+1F-2F2-F1+");
+		double angle = 90.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem enigma()
+	{
+		String title = "Test";
+		String axiom = "F";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "F[-F][+fF]F");
+		double angle = 60.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem pentaRoof()
+	{
+		String title = "PentaRoof";
+		String axiom = "F";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "F[+F]F");
+		double angle = 72.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem hexaCloud()
+	{
+		String title = "HexaCloud";
+		String axiom = "F";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "F++F[F]--F");
+		double angle = 30.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
+	public static LSystem triSky()
+	{
+		String title = "Colored Koch Flake";
+		String axiom = "F";
+		HashMap<Character, String> grammar = new HashMap<Character, String>();
+		grammar.put('F', "[F]-f++FF--F[F]+F");
+		double angle = 60.0;
+		return new LSystem(title, axiom, grammar, angle);
+	}
+	
 	public static LSystem quadCurveType1(double angle)
 	{
 		String title = "Quad Curve, Type 1";
